@@ -107,7 +107,7 @@ Create sub domain file `EX` ===> `subdomain.txt`  ===> `wihtout http/s`
 cat results.txt | egrep 'http|https' > endpoints.txt
 ```
 ```
-cat results.txt | egrep 'http|https' > endpoints.txt
+cat results10.txt | egrep 'http|https' > endpoints.txt
 ```
 
 # Usage orwaV2.sh for IPs (V2) 
