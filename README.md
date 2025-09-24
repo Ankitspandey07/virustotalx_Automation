@@ -25,7 +25,7 @@ nano orwa_3_Api_key.sh
 Edit the scripts to insert your keys:  
 
 ```
-nano orwa_10_Api.sh
+nano orwa_10_Api_key.sh
 ```
 &
 
@@ -80,9 +80,9 @@ esac
 ```
 **next step**
 ```
-`chmod +x orwa_3_Api key.sh` 
+`chmod +x orwa_3_Api_key.sh` 
 &
-`chmod +x orwa_10_Api.sh` 
+`chmod +x orwa_10_Api_key.sh` 
 &
 `chmod +x orwaV2.sh` 
 
@@ -94,10 +94,10 @@ Create sub domain file `EX` ===> `subdomain.txt`  ===> `wihtout http/s`
 
 
 ```
-./orwa_3_Api key.sh subdomain.txt | tee results.txt 
+./orwa_3_Api_key.sh subdomain.txt | tee results.txt 
 ```
 ```
-./orwa_10Api.sh subdomain.txt | tee results10.txt
+./orwa_10_Api_key.sh subdomain.txt | tee results10.txt
 ```
 
 **===>**
