@@ -4,7 +4,7 @@
 # Installation 
 
 ```
-git clone https://github.com/orwagodfather/virustotalx.git
+git clone https://github.com/Ankitspandey07/virustotalx_Automation.git
 ```
 
 ```
@@ -15,7 +15,7 @@ cd virustotalx
 create a 3 accounts [https://www.virustotal.com/gui/join-us](https://www.virustotal.com/gui/join-us) and copy the 3 api keys ===>
 
 ```
-nano orwa.sh
+nano orwa_3Api key.sh
 ```
 &
 
@@ -51,11 +51,11 @@ paste 3 api keys here ....
 
 **next step**
 
-`chmod +x orwa.sh` 
+`chmod +x orwa_3Api key.sh` 
 &
 `chmod +x orwaV2.sh` 
 
-# Usage orwa.sh for endpoints 
+# Usage orwa_3Api key.sh for endpoints 
 
 Create sub domain file `EX` ===> `subdomain.txt`  ===> `wihtout http/s` 
 
@@ -63,7 +63,7 @@ Create sub domain file `EX` ===> `subdomain.txt`  ===> `wihtout http/s`
 
 
 ```
-./orwa.sh subdomain.txt | tee results.txt 
+./orwa_3Api key.sh subdomain.txt | tee results.txt 
 ```
 
 **===>**
