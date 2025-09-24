@@ -6,13 +6,19 @@ fetch_undetected_urls() {
   local api_key_index=$2
   local api_key
 
-  if [ $api_key_index -eq 1 ]; then
-    api_key="key-1"
-  elif [ $api_key_index -eq 2 ]; then
-    api_key="key-2"
-  else
-    api_key="key-3"
-  fi
+  case $api_key_index in
+    1) api_key="key-1" ;;
+    2) api_key="key-2" ;;
+    3) api_key="key-3" ;;
+    4) api_key="key-4" ;;
+    5) api_key="key-5" ;;
+    6) api_key="key-6" ;;
+    7) api_key="key-7" ;;
+    8) api_key="key-8" ;;
+    # 9) api_key="key-9" ;;   # Commented out
+    # 10) api_key="key-10" ;; # Commented out
+    *) api_key="key-1" ;;
+  esac
 
   local URL="https://www.virustotal.com/vtapi/v2/domain/report?apikey=$api_key&domain=$domain"
 
@@ -52,6 +58,7 @@ fi
 # Initialize variables for API key rotation
 api_key_index=1
 request_count=0
+max_keys=8  # Only 8 keys active (2 commented out)
 
 # Check if the argument is a file
 if [ -f "$1" ]; then
@@ -65,11 +72,8 @@ if [ -f "$1" ]; then
     request_count=$((request_count + 1))
     if [ $request_count -ge 5 ]; then
       request_count=0
-      if [ $api_key_index -eq 1 ]; then
-        api_key_index=2
-      elif [ $api_key_index -eq 2 ]; then
-        api_key_index=3
-      else
+      api_key_index=$((api_key_index + 1))
+      if [ $api_key_index -gt $max_keys ]; then
         api_key_index=1
       fi
     fi
